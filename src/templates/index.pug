@@ -1,0 +1,29 @@
+extends layouts/_default
+block var
+  - metas = {}
+  - metas.title = 'Home'
+  - metas.url = 'url'
+  - metas.image = 'image'
+  - metas.site_name = 'React Todo Playground'
+  - metas.description = 'React Todo Playground'
+
+block append meta
+  +meta(metas)
+  include mixins/_social-meta-tag
+  +socialMetaTag(metas)
+
+block title
+  title React Todo Playground
+
+block content
+  .edit-popup
+    input.edit-item(type='text', name='')
+    button.btn-update Update
+  .container
+    .sections
+      input.item(type='text', name='')
+      button.btn-add-item Add
+
+    .items
+      ul.list-items
+

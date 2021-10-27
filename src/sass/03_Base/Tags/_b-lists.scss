@@ -1,0 +1,22 @@
+ul,
+ol {
+  padding: 0 0 0 $gutter;
+
+  ol,
+  ul {
+    margin: 0;
+  }
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  margin: 0;
+  font-weight: normal;
+}
+
+dd {
+  margin: 0 0 0 $gutter;
+}

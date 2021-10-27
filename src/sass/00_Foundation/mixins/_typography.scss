@@ -1,0 +1,18 @@
+/**
+htmlタグ用のルートフォントサイズを計算
+ */
+@function root-font-size($font-size: 16px) {
+  $default-percent: 100%;
+
+  @if $font-size == 16px {
+    @return 100%;
+  }
+
+  @else {
+    @return ($font-size / 16px) * 100%;
+  }
+}
+
+@mixin root-font-size($font-size) {
+  font-size: root-font-size($font-size);
+}

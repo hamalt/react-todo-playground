@@ -1,0 +1,34 @@
+block var
+doctype
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="format-detection", content="telephone=no,address=no,email=no")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+
+    block meta
+      mixin meta(metas)
+        meta(name="description", content=metas.description)
+        meta(name="keywords", content=metas.keywords)
+        meta(name="author", content="")
+
+    block title
+    meta(name="msapplication-TileImage", content="assets/images/touch/ms-touch-icon-144x144-precomposed.png")
+    meta(name="msapplication-TileColor", content="#2F3BA2")
+    meta(name="theme-color", content="#2F3BA2")
+    link(rel="icon", sizes="192x192", href="assets/images/touch/chrome-touch-icon-192x192.png")
+    link(rel="apple-touch-icon", href="assets/images/touch/apple-touch-icon.png")
+    link(rel="stylesheet", href="assets/css/main.css")
+  body
+    block body
+      div#wrapper.l-site-wrapper
+        include ../partials/_header
+        include ../partials/_navigation
+
+      block content
+
+      include ../partials/_footer
+
+    block end_of_body
+      script(src="assets/js/bundle.js")

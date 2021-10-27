@@ -1,0 +1,198 @@
+fieldset {
+  padding: $small-spacing;
+  margin: $base-spacing 0;
+  background-color: transparent;
+  border: $base-border;
+  border-radius: $base-border-radius;
+  box-shadow: $form-box-shadow;
+}
+
+legend {
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: $small-spacing / 2;
+  font-weight: 600;
+  white-space: normal;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+button,
+input,
+optgroup,
+textarea {
+  max-width: 100%;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+input {
+  overflow: visible;
+
+  &[type="text"],
+  &[type="email"],
+  &[type="url"],
+  &[type="search"],
+  &[type="telephone"],
+  &[type="number"],
+  &[type="date"],
+  &[type="datetime"],
+  &[type="datetime-local"],
+  &[type="month"],
+  &[type="week"],
+  &[type="time"],
+  &[type="password"],
+  textarea {
+    display: inherit;
+  }
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+select {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: $base-spacing / 3;
+  margin-bottom: $small-spacing;
+  text-transform: none;
+  background-color: $base-background-color;
+  border: $base-border;
+  border-radius: $base-border-radius;
+  box-shadow: $form-box-shadow;
+  transition: border-color $base-duration $base-timing;
+  appearance: none;
+
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &::placeholder {
+    color: tint($base-font-color, 40%);
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: $small-spacing / 2;
+  font-weight: 600;
+
+  > input,
+  > select,
+  > textarea {
+    margin-top: $small-spacing / 2;
+  }
+}
+
+select:placeholder-shown,
+select:-moz-placeholder,
+select:-ms-input-placeholder {
+  color: tint($base-font-color, 40%);
+}
+
+#{$all-text-inputs} {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: $base-spacing / 3;
+  margin-bottom: $small-spacing;
+  background-color: $base-background-color;
+  border: $base-border;
+  border-radius: $base-border-radius;
+  box-shadow: $form-box-shadow;
+  transition: border-color $base-duration $base-timing;
+  appearance: none;
+
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &::placeholder,
+  &:placeholder-shown,
+  &:-moz-placeholder,
+  &:-ms-input-placeholder {
+    color: tint($base-font-color, 40%);
+  }
+
+  &:hover {
+    border-color: shade($base-border-color, 20%);
+  }
+
+  &:focus {
+    border-color: $action-color;
+    outline: none;
+    box-shadow: $form-box-shadow-focus;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: shade($base-background-color, 5%);
+
+    &:hover {
+      border: $base-border;
+    }
+  }
+}
+
+button {
+  overflow: visible;
+  text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+  }
+
+  &:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+}
+
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  padding: 0;
+  margin-right: $small-spacing / 2;
+}
+
+[type="file"] {
+  width: 100%;
+  margin-bottom: $small-spacing;
+}
+
+//select {
+//    appearance: none;
+//    margin-bottom: $small-spacing;
+//    background-color: $base-background-color;
+//}

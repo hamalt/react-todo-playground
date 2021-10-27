@@ -1,0 +1,42 @@
+img {
+  height: auto;
+  vertical-align: middle;
+  border: none;
+}
+
+svg {
+  max-width: 100%;
+  height: 100%;
+}
+
+img,
+picture,
+figure {
+  margin: 0;
+}
+
+figure,
+figcaption {
+  display: block;
+}
+
+progress {
+  display: inline-block;
+}
+
+img,
+picture,
+embed,
+iframe,
+object,
+video {
+  max-width: 100%;
+}
+
+embed,
+iframe,
+object,
+video,
+progress {
+  vertical-align: baseline;
+}
